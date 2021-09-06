@@ -16,10 +16,11 @@ changes can be seen in real-time.
 
 ## Services
 
-### Supervisor
-This image comes with [Supervisor](http://supervisord.org/) installed. You can easily [configure this to manage your
-Laravel queu](https://blog.programster.org/getting-started-with-laravel-queues-and-background-jobs) as well as managing
-any custom processes you wish to add.
+### Supervisor & Laravel Queue
+This image comes with [Supervisor](http://supervisord.org/) installed. This has been [configured to manage the
+Laravel queu](https://blog.programster.org/getting-started-with-laravel-queues-and-background-jobs). It also manages
+the Apache web server to ensure that it comes back online if it should fail for whatever reason. You can edit the
+`docker/supervisord.conf` file in order to add other processes for it to manage.
 
 
 ### Cron
