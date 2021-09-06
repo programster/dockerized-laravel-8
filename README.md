@@ -7,14 +7,22 @@ I am guessing more people know how to configure Ubuntu than Alpine Linux.
 
 ## Getting Started
 
-1. Create an `.env` file from the `.env.example` file and fill it in.
+1. Create an `.env` file from the `.env.example` file and fill in the details.
 1. Build the Docker image by running `docker-compose build`
 1. Run the site by running `docker-compose up -d`
-    * When devving, run `docker-compose -f docker-dev-compose.yml` to run with a volume for the site so that website
-changes can be seen in real-time.
+    * When developing the site, you may wish to run `docker-compose -f docker-dev-compose.yml` to run with a volume
+for the site so that changes to the take effect immediately without needint to rebuild and deploy.
 
 
 ## Services
+
+### PostgreSQL
+This codebase is set up to deploy and use a PostgreSQL database. MySQL and MariaDB is more commonly used in the PHP
+world but I find the PostgreSQL has too many useful features to be ignored. Primarily:
+
+ * [Native UUID type](https://www.postgresql.org/docs/9.1/datatype-uuid.html)
+ * [Parallel queries](https://blog.programster.org/postgresql-parallel-queries).
+
 
 ### Supervisor & Laravel Queue
 This image comes with [Supervisor](http://supervisord.org/) installed. This has been [configured to manage the
