@@ -1,6 +1,9 @@
 # Dockerized Laravel 8
 This is a template project for quickly getting started with developing Laravel 8 projects.
 
+There is now a [dockerized Laravel 9](https://github.com/programster/dockerized-laravel-9), which you may be more 
+interested in because it is an LTS.
+
 This makes use of Ubuntu 20.04 as the base image as it is easy enough to tweak and extend for a broader audience. E.g.
 I am guessing more people know how to configure Ubuntu than Alpine Linux.
 
